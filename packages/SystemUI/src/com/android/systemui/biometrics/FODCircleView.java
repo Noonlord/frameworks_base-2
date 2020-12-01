@@ -92,8 +92,6 @@ public class FODCircleView extends ImageView implements ConfigurationListener {
     private boolean mIsDreaming;
     private boolean mIsKeyguard;
     private boolean mIsCircleShowing;
-    private boolean mIsDreaming;
-    private boolean mIsKeyguard;
 
     private boolean mDozeEnabled;
     private boolean mFodGestureEnable;
@@ -189,6 +187,7 @@ public class FODCircleView extends ImageView implements ConfigurationListener {
                 hide();
             } else {
                 updateAlpha();
+            }
             updateStyle();
             if (mFODAnimation != null) {
                 mFODAnimation.setAnimationKeyguard(mIsKeyguard);
@@ -244,6 +243,7 @@ public class FODCircleView extends ImageView implements ConfigurationListener {
                 mPressPending = false;
             }
             mScreenTurnedOn = true;
+        }
 
 	@Override
         public void onBiometricHelp(int msgId, String helpString,
